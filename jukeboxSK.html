@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+ <html>
+  <head >
+   <title>
+    Home
+   </title>
+     <link rel="stylesheet" href=" jukeboxSK.css">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  </head>
+<body onload="jukeBox.start()">
+
+<img id = "backgroudPic" src ="sheWillPic.PNG"style ="width:662.5px; height: 550px;">
+<img id = "backgroudPic2" src ="proudFamilyPic.jpg"style ="width:662.5px; height: 550px;">
+<img id = "backgroudPic3" src ="bentlyCoupePic.jpg"style ="width:662.5px; height: 550px;">
+
+<div id = "mps">
+</div>
+<div id = "mpb">
+</div>
+
+  <p id = "picLogo1"><img src ="sheWillPic.PNG"style ="width:225px; height:225px; border-radius: 50%; border: 1px solid black;"></p>
+  <p id = "songName1">She Will</p>
+  <p id = "artistName1">Sosamann ft Young Dolph</p>
+
+  <p id = "picLogo2"><img src ="proudFamilyPic.jpg"style ="width:225px; height:225px; border-radius: 50%; border: 1px solid black;"></p>
+  <p id = "songName2">Proud Family</p>
+  <p id = "artistName2">Tory Lanez</p>
+
+  <p id = "picLogo3"><img src ="bentlyCoupePic.jpg"style ="width:225px; height:225px; border-radius: 50%; border: 1px solid black;"></p>
+  <p id = "songName3">Bentley Coupe</p>
+  <p id = "artistName3">Lil Yachty ft Gucci Mane</p>
+
+  <div id = "cap">
+  </div>
+  <div id = "bottom">
+  <button id ="play" onclick="jukeBox.play()"><img src ="Play-button.PNG"style ="width:45px; height:45px;"></button>
+  <button id ="pause" onclick="jukeBox.pause()"><img src ="pause-button.PNG"style ="width:45px; height:45px;"></button>
+  <button id ="next" onclick="jukeBox.next()"><img src ="next-button.PNG"style ="width:45px; height:45px;"></button>
+  <button id ="previous" onclick="jukeBox.prev()"><img src ="next-button.PNG"style ="width:45px; height:45px;"></button>
+  </div>
+
+  <script type="text/javascript">
+  var source = ["03-Sosamann-She_Will_Feat_Young_Dolph_Prod_By_XO.mp3","08-Tory_Lanez-Proud_Family_Prod_By_Tory_Lanez_Play_Picasso_CoopChardonnay.mp3","Bentley_Coupe_-_Lil_Yachty_Ft_Gucci_Mane_Prod_BYOU[.mp3"];
+  var song = new Audio();
+  var currentSong = 0;
+
+  var jukeBox = {
+  start : function() {
+    document.getElementById("play").style.visibility = "hidden";
+    document.getElementById("pause").style.visibility = "visible";
+        song.src = source[currentSong];
+        song.play();
+    },  changer : function() {
+      if(currentSong==0)
+      {
+        document.getElementById("backgroudPic").style.visibility = "visible";
+        document.getElementById("picLogo1").style.visibility = "visible";
+        document.getElementById("songName1").style.visibility = "visible";
+        document.getElementById("artistName1").style.visibility = "visible";
+        document.getElementById("backgroudPic2").style.visibility = "hidden";
+        document.getElementById("picLogo2").style.visibility = "hidden";
+        document.getElementById("songName2").style.visibility = "hidden";
+        document.getElementById("artistName2").style.visibility = "hidden";
+        document.getElementById("backgroudPic3").style.visibility = "hidden";
+        document.getElementById("picLogo3").style.visibility = "hidden";
+        document.getElementById("songName3").style.visibility = "hidden";
+        document.getElementById("artistName3").style.visibility = "hidden";
+
+      }if(currentSong==1)
+      {
+        document.getElementById("backgroudPic2").style.visibility = "visible";
+        document.getElementById("picLogo2").style.visibility = "visible";
+        document.getElementById("songName2").style.visibility = "visible";
+        document.getElementById("artistName2").style.visibility = "visible";
+        document.getElementById("backgroudPic").style.visibility = "hidden";
+        document.getElementById("picLogo1").style.visibility = "hidden";
+        document.getElementById("songName1").style.visibility = "hidden";
+        document.getElementById("artistName1").style.visibility = "hidden";
+        document.getElementById("backgroudPic3").style.visibility = "hidden";
+        document.getElementById("picLogo3").style.visibility = "hidden";
+        document.getElementById("songName3").style.visibility = "hidden";
+        document.getElementById("artistName3").style.visibility = "hidden";
+
+      }if(currentSong==2)
+      {
+        document.getElementById("backgroudPic3").style.visibility = "visible";
+        document.getElementById("picLogo3").style.visibility = "visible";
+        document.getElementById("songName3").style.visibility = "visible";
+        document.getElementById("artistName3").style.visibility = "visible";
+        document.getElementById("backgroudPic").style.visibility = "hidden";
+        document.getElementById("picLogo1").style.visibility = "hidden";
+        document.getElementById("songName1").style.visibility = "hidden";
+        document.getElementById("artistName1").style.visibility = "hidden";
+        document.getElementById("backgroudPic2").style.visibility = "hidden";
+        document.getElementById("picLogo2").style.visibility = "hidden";
+        document.getElementById("songName2").style.visibility = "hidden";
+        document.getElementById("artistName2").style.visibility = "hidden";
+
+      }
+      }, play : function() {
+
+      song.play();
+      document.getElementById("play").style.visibility = "hidden";
+      document.getElementById("pause").style.visibility = "visible";
+    }, pause : function() {
+
+      song.pause();
+      document.getElementById("play").style.visibility = "visible";
+      document.getElementById("pause").style.visibility = "hidden";
+      }, next : function() {
+        document.getElementById("play").style.visibility = "hidden";
+        document.getElementById("pause").style.visibility = "visible";
+     currentSong++;
+     if(currentSong>2)
+     {
+       currentSong = 0;
+     }
+     this.changer();
+     song.src = source[currentSong];
+     song.play();
+   },prev : function() {
+     document.getElementById("play").style.visibility = "hidden";
+     document.getElementById("pause").style.visibility = "visible";
+       currentSong--;
+       if(currentSong<0)
+       {
+         currentSong = 2;
+       }
+       this.changer();
+       song.src = source[currentSong];
+       song.play();
+      }
+};
+
+
+    </script>
+
+  </body>
+  <footer>
+   <p class ="nTlEtG" style="font-family:comic sans ms";>
+    R67F Da45Y
+   </p>
+  </footer>
+  </html>

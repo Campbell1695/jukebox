@@ -1,0 +1,159 @@
+#backgroudPic{
+  -webkit-filter: blur(0px);
+   filter: blur(15px);
+   top: 15px;
+   left: 331.25px;
+   position: absolute;
+   /* visibility: hidden; */
+}
+#backgroudPic2{
+  -webkit-filter: blur(0px);
+   filter: blur(15px);
+   top: 15px;
+   left: 331.25px;
+   position: absolute;
+   visibility: hidden;
+}
+#backgroudPic3{
+  -webkit-filter: blur(0px);
+   filter: blur(15px);
+   top: 15px;
+   left: 331.25px;
+   position: absolute;
+   visibility: hidden;
+}
+#mpb{
+   width: 400px;
+ 	 height: 500px;
+   top: 30px;
+   left: 461.5px;
+   border: 2px solid black;
+ 	 background-color: white;
+   opacity: 0.35;
+   position: absolute;
+   border-radius: 25px;
+}
+#mps{
+   width: 400px;
+ 	 height: 500px;
+   top: 30px;
+   left: 461.5px;
+   border: 2px solid black;
+   position: absolute;
+   border-radius: 25px;
+}
+#cap{
+   width: 405px;
+ 	 height: 55px;
+   top: 25px;
+   left: 456.5px;
+ 	 background-color: darkslategray;
+   position: absolute;
+   border-radius: 25px 25px 5px 5px;
+   border: 4px solid black;
+}
+#bottom{
+   width: 405px;
+ 	 height: 80px;
+   top: 455px;
+   left: 456.5px;
+   background-color: darkslategrey;
+   position: absolute;
+   border-radius: 5px 5px 25px 25px;
+    border: 4px solid black;
+}
+#play{
+   top: 10.5px;
+   left: 169.5px;
+   position: absolute;
+   border-radius: 30px;
+}
+#pause{
+  top: 10.5px;
+  left: 169.5px;
+  position: absolute;
+  border-radius: 30px;
+   visibility: hidden;
+}
+#next{
+  top: 10.5px;
+  left: 285.75px;
+  position: absolute;
+  border-radius: 30px;
+   transform: rotate(180deg);
+}
+#previous{
+   top: 10.5px;
+   left: 57.625px;
+   position: absolute;
+   border-radius: 30px;
+}
+#picLogo1{
+   top: 90px;
+   left: 550px;
+   position: absolute;
+}
+#picLogo2{
+   top: 90px;
+   left: 550px;
+   position: absolute;
+   visibility: hidden;
+}
+#picLogo3{
+   top: 90px;
+   left: 550px;
+   position: absolute;
+   visibility: hidden;
+}
+#songName1{
+   top: 315px;
+   left: 629.25px;
+   position: absolute;
+   font-family: 'Gloria Hallelujah', cursive;
+   font-size: 20px;
+}
+#songName2{
+   top: 315px;
+   left: 604.14px;
+   position: absolute;
+   visibility: hidden;
+   font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}
+#songName3{
+   top: 315px;
+   left: 596.33px;
+   position: absolute;
+   visibility: hidden;
+   font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}
+#artistName1{
+   top: 350px;
+   left: 540.92px;
+   position: absolute;
+   font-family: 'Gloria Hallelujah', cursive;
+   font-size: 20px;
+}
+#artistName2{
+   top: 350px;
+   left: 606.835px;
+   position: absolute;
+   visibility: hidden;
+   font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}
+#artistName3{
+   top: 350px;
+   left: 539.17px;
+   position: absolute;
+   visibility: hidden;
+   font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}
+.nTlEtG{
+  top: 85px;
+  left: 475px;
+  position: absolute;
+  font-size: 5px;
+}
