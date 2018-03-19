@@ -9,6 +9,7 @@
   </head>
 <body onload="jukeBox.start()">
 
+<img id = "background" src ="background.jpg"style ="width:1325px; height: 575px;">
 <img id = "backgroudPic" src ="sheWillPic.PNG"style ="width:662.5px; height: 550px;">
 <img id = "backgroudPic2" src ="proudFamilyPic.jpg"style ="width:662.5px; height: 550px;">
 <img id = "backgroudPic3" src ="bentlyCoupePic.jpg"style ="width:662.5px; height: 550px;">
@@ -30,6 +31,10 @@
   <p id = "songName3">Bentley Coupe</p>
   <p id = "artistName3">Lil Yachty ft Gucci Mane</p>
 
+  <div id = "seek-bar"></div>
+  <div id ="fill"></div>
+  <div id ="handle"></div>
+
   <div id = "cap">
   </div>
   <div id = "bottom">
@@ -43,6 +48,9 @@
   var source = ["03-Sosamann-She_Will_Feat_Young_Dolph_Prod_By_XO.mp3","08-Tory_Lanez-Proud_Family_Prod_By_Tory_Lanez_Play_Picasso_CoopChardonnay.mp3","Bentley_Coupe_-_Lil_Yachty_Ft_Gucci_Mane_Prod_BYOU[.mp3"];
   var song = new Audio();
   var currentSong = 0;
+  var fillBar = document.getElementById("fill");
+
+
 
   var jukeBox = {
   start : function() {
@@ -50,6 +58,8 @@
     document.getElementById("pause").style.visibility = "visible";
         song.src = source[currentSong];
         song.play();
+        var position = song.currentTime / song.duration;
+        fillBar.style.width = ""
     },  changer : function() {
       if(currentSong==0)
       {
@@ -130,6 +140,8 @@
        song.src = source[currentSong];
        song.play();
       }
+
+
 };
 
 
@@ -137,6 +149,8 @@
 
   </body>
   <footer>
+    <p id = "battery"><img src ="battery.PNG"style ="width:40px; height:25px;"></p>
+      <p id = "phoneBars"><img src ="phoneBars.PNG"style ="width:40px; height:15px;"></p>
    <p class ="nTlEtG" style="font-family:comic sans ms";>
     R67F Da45Y
    </p>

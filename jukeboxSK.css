@@ -1,24 +1,36 @@
-#backgroudPic{
+#background{
   -webkit-filter: blur(0px);
    filter: blur(15px);
+   top: 0px;
+   left: 0px;
+   position: absolute;
+}
+#backgroudPic{
+  -webkit-filter: blur(2px);
+   filter: blur(3px);
    top: 15px;
    left: 331.25px;
+   opacity: .85;
+   border-radius: 25px;
    position: absolute;
-   /* visibility: hidden; */
 }
 #backgroudPic2{
   -webkit-filter: blur(0px);
-   filter: blur(15px);
+   filter: blur(3px);
    top: 15px;
    left: 331.25px;
+    opacity: .85;
+   border-radius: 25px;
    position: absolute;
    visibility: hidden;
 }
 #backgroudPic3{
   -webkit-filter: blur(0px);
-   filter: blur(15px);
+   filter: blur(3px);
    top: 15px;
    left: 331.25px;
+    opacity: .85;
+   border-radius: 25px;
    position: absolute;
    visibility: hidden;
 }
@@ -151,9 +163,41 @@
    font-family: 'Gloria Hallelujah', cursive;
     font-size: 20px;
 }
+#seek-bar{
+  width: 250px;
+  height: 5px;
+  background-color: grey;
+  display: flex;
+  border-radius: 50px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+#fill{
+  height: 5px;
+  background-color: royalblue;
+  border-radius: 20px;
+}
+#handle{
+  height: 8px;
+  width: 8px;
+  background-color: royalblue;
+  border-radius: 50%;
+  margin-left: -5px;
+  transform: scale(2);
+}
+#battery{
+  top: 75px;
+   left: 815px;
+   position: absolute;
+}
+#phoneBars{
+   top: 75px;
+   left: 475px;
+   position: absolute;
+}
 .nTlEtG{
   top: 85px;
-  left: 475px;
+  left: 520px;
   position: absolute;
-  font-size: 5px;
+  font-size: 8px;
 }
