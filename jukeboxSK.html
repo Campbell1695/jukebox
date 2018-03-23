@@ -36,6 +36,7 @@
   <div id ="handle"></div>
 
   <div id = "cap">
+    <button id ="powerButtonImg" onclick="jukeBox.stop()"><img src ="powerButton.PNG"style ="width:20px; height:20px;"></button>
   </div>
   <div id = "bottom">
   <button id ="play" onclick="jukeBox.play()"><img src ="Play-button.PNG"style ="width:45px; height:45px;"></button>
@@ -109,15 +110,23 @@
       }
       }, play : function() {
 
-      song.play();
+        if(currentSong< -99)
+        {
+
+        }else{song.play();
       document.getElementById("play").style.visibility = "hidden";
       document.getElementById("pause").style.visibility = "visible";
-    }, pause : function() {
+    }
+  }, pause : function() {
 
       song.pause();
       document.getElementById("play").style.visibility = "visible";
       document.getElementById("pause").style.visibility = "hidden";
       }, next : function() {
+        if(currentSong< -99)
+        {
+
+        }else{
         document.getElementById("play").style.visibility = "hidden";
         document.getElementById("pause").style.visibility = "visible";
      currentSong++;
@@ -128,10 +137,16 @@
      this.changer();
      song.src = source[currentSong];
      song.play();
+   }
    },prev : function() {
-     document.getElementById("play").style.visibility = "hidden";
-     document.getElementById("pause").style.visibility = "visible";
+     if(currentSong< -99)
+     {
+
+     }else{
+       document.getElementById("play").style.visibility = "hidden";
+       document.getElementById("pause").style.visibility = "visible";
        currentSong--;
+
        if(currentSong<0)
        {
          currentSong = 2;
@@ -139,7 +154,26 @@
        this.changer();
        song.src = source[currentSong];
        song.play();
-      }
+     }
+     }, stop : function() {
+        document.getElementById("play").style.visibility = "visible";
+        document.getElementById("pause").style.visibility = "hidden";
+
+        document.getElementById("backgroudPic").style.visibility = "hidden";
+        document.getElementById("picLogo1").style.visibility = "hidden";
+        document.getElementById("songName1").style.visibility = "hidden";
+        document.getElementById("artistName1").style.visibility = "hidden";
+        document.getElementById("backgroudPic2").style.visibility = "hidden";
+        document.getElementById("picLogo2").style.visibility = "hidden";
+        document.getElementById("songName2").style.visibility = "hidden";
+        document.getElementById("artistName2").style.visibility = "hidden";
+        document.getElementById("backgroudPic3").style.visibility = "hidden";
+        document.getElementById("picLogo3").style.visibility = "hidden";
+        document.getElementById("songName3").style.visibility = "hidden";
+        document.getElementById("artistName3").style.visibility = "hidden";
+        song.src = " ";
+        currentSong = -100;
+        },
 
 
 };
