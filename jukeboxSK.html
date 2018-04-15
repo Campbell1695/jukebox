@@ -36,7 +36,8 @@
   <div id ="handle"></div>
 
   <div id = "cap">
-    <button id ="powerButtonImg" onclick="jukeBox.stop()"><img src ="powerButton.PNG"style ="width:20px; height:20px;"></button>
+    <button id ="powerButton_off" onclick="jukeBox.stop()"><img src ="powerButton.PNG"style ="width:20px; height:20px;"></button>
+    <button id ="powerButton_on" onclick="jukeBox.start()"><img src ="powerButton.PNG"style ="width:20px; height:20px;"></button>
   </div>
   <div id = "bottom">
   <button id ="play" onclick="jukeBox.play()"><img src ="Play-button.PNG"style ="width:45px; height:45px;"></button>
@@ -57,6 +58,13 @@
   start : function() {
     document.getElementById("play").style.visibility = "hidden";
     document.getElementById("pause").style.visibility = "visible";
+    document.getElementById("powerButton_off").style.visibility = "visible";
+    document.getElementById("powerButton_on").style.visibility = "hidden";
+    document.getElementById("backgroudPic").style.visibility = "visible";
+    document.getElementById("picLogo1").style.visibility = "visible";
+    document.getElementById("songName1").style.visibility = "visible";
+    document.getElementById("artistName1").style.visibility = "visible";
+        currentSong = 0;
         song.src = source[currentSong];
         song.play();
         var position = song.currentTime / song.duration;
@@ -109,24 +117,24 @@
 
       }
       }, play : function() {
-
         if(currentSong< -99)
         {
 
-        }else{song.play();
+        }else{
+          song.play();
       document.getElementById("play").style.visibility = "hidden";
       document.getElementById("pause").style.visibility = "visible";
-    }
+      }
   }, pause : function() {
 
       song.pause();
       document.getElementById("play").style.visibility = "visible";
       document.getElementById("pause").style.visibility = "hidden";
       }, next : function() {
-        if(currentSong< -99)
-        {
+      if(currentSong< -99)
+      {
 
-        }else{
+      }else{
         document.getElementById("play").style.visibility = "hidden";
         document.getElementById("pause").style.visibility = "visible";
      currentSong++;
@@ -154,7 +162,7 @@
        this.changer();
        song.src = source[currentSong];
        song.play();
-     }
+    }
      }, stop : function() {
         document.getElementById("play").style.visibility = "visible";
         document.getElementById("pause").style.visibility = "hidden";
@@ -173,6 +181,8 @@
         document.getElementById("artistName3").style.visibility = "hidden";
         song.src = " ";
         currentSong = -100;
+        document.getElementById("powerButton_off").style.visibility = "hidden";
+        document.getElementById("powerButton_on").style.visibility = "visible";
         },
 
 
